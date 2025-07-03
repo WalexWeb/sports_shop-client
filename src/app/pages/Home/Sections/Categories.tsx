@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { m } from "framer-motion";
-import { categories } from "../../data/mockData";
+import { categories } from "../../../data/mockData";
 
 function Categories() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);

@@ -1,5 +1,5 @@
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { sliderImages } from "../../data/mockData";
+import { sliderImages } from "../../../data/mockData";
 import { m } from "framer-motion";
 import { useState } from "react";
 

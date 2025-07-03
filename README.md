@@ -1,69 +1,45 @@
-# React + TypeScript + Vite
+# Sports Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современное клиентское приложение интернет-магазина спортивной формы и экипировки
 
-Currently, two official plugins are available:
+## 🚀 Стек технологий
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** — библиотека для построения пользовательских интерфейсов.
+- **TypeScript** — строгая типизация для повышения надежности кода.
+- **Vite** — быстрый современный сборщик и dev-сервер.
+- **Bun** — менеджер пакетов и инструмент для сборки.
+- **Tailwind CSS** — утилитарный CSS-фреймворк для стилизации интерфейса.
+- **Framer Motion** — библиотека для анимаций и плавных переходов.
+- **React Router DOM** — маршрутизация внутри SPA.
+- **Zustand** — легковесное управление состоянием приложения.
+- **Axios** — HTTP-клиент для работы с API.
+- **React Icons** — коллекция SVG-иконок для интерфейса.
+- **ESLint + Prettier** — инструменты для линтинга и автоформатирования кода.
 
-## Expanding the ESLint configuration
+## 📚 Используемые библиотеки
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** — основа для построения компонентов и управления состоянием.
+- **TypeScript** — добавляет типизацию для предотвращения ошибок.
+- **Vite** — обеспечивает быструю разработку и сборку проекта.
+- **Tailwind CSS** — позволяет быстро и удобно стилизовать компоненты.
+- **Framer Motion** — реализует анимации (например, слайдер, появление карточек).
+- **React Router DOM** — отвечает за маршрутизацию между страницами.
+- **Zustand** — хранит глобальное состояние (например, корзина, фильтры).
+- **Axios** — для запросов к API (в проекте используются моковые данные).
+- **React Icons** — SVG-иконки для кнопок, соцсетей и навигации.
+- **ESLint, Prettier** — поддерживают чистоту и единый стиль кода.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📁 Структура проекта
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+src/
+  ├── api/                # Запросы к API
+  ├── app/
+  │   ├── App.tsx         # Корневой компонент приложения (React router dom)
+  │   ├── components/     # Общие компоненты (TailwindCSS, framer-motion)
+  │   ├── pages/          #  Страницы сайта
+  │   └── store/          # Zustand store
+  ├── hooks/              # Кастомные хуки
+  ├── types/              # Типы TypeScript для данных и пропсов
+  └── main.tsx            # Точка входа приложения
 ```

@@ -1,8 +1,8 @@
 import { m } from "framer-motion";
 import { useState } from "react";
-import Footer from "../components/layout/Footer";
-import Navbar from "../components/layout/Navbar";
-import { useDebounce } from "../../hooks/useDebounce";
+import Footer from "../../components/layout/Footer";
+import Navbar from "../../components/layout/Navbar";
+import { useDebounce } from "../../../hooks/useDebounce";
 import Slider from "./Sections/Slider";
 import Categories from "./Sections/Categories";
 import Products from "./Sections/Products";
